@@ -57,23 +57,23 @@ const syncscroll = function () {
           let scrollX = el[scroll + Left]
           let scrollY = el[scroll + Top]
 
-          let xRate = scrollX / (el[scroll + Width] - el[client + Width])
+          let xRate = Math.ceil(scrollX) / (el[scroll + Width] - el[client + Width])
           let yRate = scrollY / (el[scroll + Height] - el[client + Height])
 
-          let updateX = scrollX !== el.eX
+          let updateX = Math.ceil(scrollX) !== el.eX
           let updateY = scrollY !== el.eY
 
           let otherEl
           let i = 0
 
-          el.eX = scrollX
+          el.eX = Math.ceil(scrollX)
           el.eY = scrollY
 
           for (; i < elems[length];) {
             otherEl = elems[i++]
             if (otherEl !== el) {
               if (updateX && Math.round(otherEl[scroll + Left] - (scrollX = otherEl.eX = Math.round(xRate * (otherEl[scroll + Width] - otherEl[client + Width]))))) {
-                otherEl[scroll + Left] = scrollX
+                otherEl[scroll + Left] = Math.ceil(scrollX)
               }
 
               if (updateY && Math.round(otherEl[scroll + Top] - (scrollY = otherEl.eY = Math.round(yRate * (otherEl[scroll + Height] - otherEl[client + Height]))))) {
