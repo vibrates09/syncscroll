@@ -1,0 +1,23 @@
+{
+  "name": "syncscroll",
+  "version": "0.0.4",
+  "description": "Scroll two or more areas simultaneously",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vibrates09/syncscroll.git"
+  },
+  "scripts": {
+    "eslint": "./node_modules/eslint/bin/eslint.js \"./*.{js,vue}\" --fix"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/vibrates09/syncscroll#readme",
+  "devDependencies": {
+    "eslint": "^5.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}

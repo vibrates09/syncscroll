@@ -1,27 +1,25 @@
-syncscroll
+
+syncscroll2
 ==========
-
-
-Syncscroll is a micro library (946 bytes minified) written in vanilla
-javascript, which allows to scroll two or more scrollable areas
-simultaneously ([online demo](http://asvd.github.io/syncscroll/)).
-
+Based on [this](https://github.com/asvd/syncscroll).
 
 ### Usage
 
-
-Download and unpack the
-[distribution](https://github.com/asvd/syncscroll/releases/download/v0.0.3/syncscroll-0.0.3.tar.gz),
-or install it using [Bower](http://bower.io/):
-
-```sh
-$ bower install syncscroll
+```
+npm install syncscroll
+```
+or
+```
+yarn add syncscroll
 ```
 
-Load the `syncscroll.js` in a preferable way (that is an UMD module):
+```
+import syncscroll from 'syncscroll'
+```
 
-```html
-<script src="path/to/syncscroll.js"></script>
+When the window is loaded, call
+```
+syncscroll()
 ```
 
 Create the scrollable elements which you need to be synchroniously
@@ -38,15 +36,3 @@ attribute to the same value:
     Second big text goes there...
 </div>
 ```
-
-That's it! Now the elements will be scrolled simultaneously. Keep in
-mind that scrolling is synchronized proportionally, and not by
-amount of pixels.
-
-If you update a set of synchronized elements by changing the classes
-or attributes, invoke `syncscroll.reset()` to update the listeners.
-
-Have fun!
-
-
-follow me on twitter: https://twitter.com/asvd0
